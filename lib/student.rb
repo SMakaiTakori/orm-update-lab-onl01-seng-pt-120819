@@ -10,7 +10,7 @@ class Student
     @id = id
   end
     
-def self.create_table
+  def self.create_table
    sql =  <<-SQL
      CREATE TABLE IF NOT EXISTS songs (
        id INTEGER PRIMARY KEY,
@@ -19,7 +19,7 @@ def self.create_table
        )
        SQL
    DB[:conn].execute(sql)
- end
+  end
 
 
   # Remember, you can access your database connection anywhere in this class
